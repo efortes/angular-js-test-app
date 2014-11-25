@@ -1,0 +1,24 @@
+
+<div class="row panel panel-default news-items ">
+	<div class="panel-heading">News</div>
+	<div class="col-md-12 panel-body" ng-repeat="item in items">
+		<div class="container" ng-click="show(item);">
+			<div class="row">
+				<div class="col-md-1 col-sm-1 col-xm-1">
+					<img src="{{item.image}}" />
+				</div>
+				<div class="col-md-11 col-sm-11  col-xm-11">
+					<p>{{item.title}}</p>				
+				</div>
+				<div class="clearfix col-md-12 col-sm-12 col-xm-12 description"  ng-show="item.showSummary">		
+					<div>
+						{{item.summary}}
+					</div>			
+					<a href="{{item.url}}" target="_blank">Read more</a>				
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div ng-show="isLoading" class="loader">Loading...</div>
+</div>
